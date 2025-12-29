@@ -23,7 +23,7 @@ all_value = []
 for i in final_X:
   min_val = final_X[i].min()
   max_value = final_X[i].max()
-  result = st.sidebar.slider(f'select {i} value')
+  result = st.sidebar.slider(f'select {i} value',min_value,max_value)
   all_value.append(result)
 
 user_X = scaler.transform([all_value])
@@ -46,5 +46,6 @@ with st.spinner("predicting house price"):
 st.success(f'estimated house price is : ${final_price}')
 st.markdown('''**Design and development by: Mr Sachin Shukla**''')
            
+
 
 
