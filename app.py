@@ -21,7 +21,7 @@ st.sidebar.title('Select House features: ')
 st.sidebar.image('https://m.media-amazon.com/images/I/71ea+0NVViL.jpg')
 all_value = []
 for i in final_X:
-  min_val = final_X[i].min()
+  min_value = final_X[i].min()
   max_value = final_X[i].max()
   result = st.sidebar.slider(f'select {i} value',min_value,max_value)
   all_value.append(result)
@@ -46,6 +46,7 @@ with st.spinner("predicting house price"):
 st.success(f'estimated house price is : ${final_price}')
 st.markdown('''**Design and development by: Mr Sachin Shukla**''')
            
+
 
 
 
